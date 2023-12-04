@@ -1,4 +1,4 @@
-import { ErrorRequestHandler, NextFunction, Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 
 // Define the type for the error handler function
 export type ErrorHandlerType = (err: Error, req: Request, res: Response, next: NextFunction) => void;
@@ -24,6 +24,12 @@ export const errorHandler: ErrorHandlerType = (err, req, res, next) => {
         statusCode = 400;
         break;
       case "testError":
+        statusCode = 404;
+        break;
+      case "PaymentFailed":
+        statusCode = 404;
+        break;
+      case "PaymentSignatureFailed":
         statusCode = 404;
         break;
       // Add more cases as needed for other custom error types
