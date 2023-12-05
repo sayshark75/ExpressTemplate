@@ -3,6 +3,7 @@
 - Simple Boilerplate of a Express Application made using Typescript
 - With Seperate Error Handling Middleware
 - and a Logger to check API Call Logs
+- Added Payment Features of Razorpay
 
 # Usage
 
@@ -18,6 +19,13 @@ or
 `git init`
 
 - Start Using this Boilerplate
+
+# Razorpay Feature
+
+- Create your own .env file
+- Put your PORT, RAZORPAY_KEY, RAZORPAY_SECRET
+- Modify Payment Controller and Payment Service
+- Done...
 
 # Contribution
 
