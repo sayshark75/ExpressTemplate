@@ -1,6 +1,8 @@
 import express, { NextFunction, Request, Response } from "express";
 import dotenv from "dotenv";
 import paymentsController from "../controllers/payments.controller";
+import Razorpay from "razorpay";
+import crypto from "crypto";
 
 dotenv.config();
 
@@ -11,15 +13,7 @@ const routes = express.Router();
 // to create a Order according to Products
 routes.post("/orders", paymentsController.createOrder);
 
-// Verify the Product Payment signature
-routes.post("/payment_verify", (req: Request, res: Response, next: NextFunction) => {
-  try {
-    // we will use the Order ID from DB and razorpay_payment_id from client.
-  } catch (error) {
-    const exception = new Error("Payment Verification Failed");
-    exception.name = "PaymentSignatureFailed";
-    next(exception);
-  }
-});
+// Verify the Product Payment capture via webhook
+routes.post("/webhook", paymentsController.webhook);
 
 export default routes;
