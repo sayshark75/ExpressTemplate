@@ -14,6 +14,8 @@
 or
 `yarn`
 
+- Add .env file with PORT
+
 - Initialize Git, so you can connect with your Repo
 
 `git init`
@@ -23,8 +25,11 @@ or
 # Razorpay Feature
 
 - Create your own .env file
-- Put your PORT, RAZORPAY_KEY, RAZORPAY_SECRET
+
+- Put your RAZORPAY_KEY, RAZORPAY_SECRET
+
 - Modify Payment Controller and Payment Service
+
 - Done...
 
 # Contribution
