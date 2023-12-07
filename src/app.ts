@@ -4,7 +4,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { errorHandler } from "./middlewares/error.middleware";
 import { logMiddleware } from "./middlewares/log.middleware";
-import routes from "./routes/paymet.routes";
+import paymentRoutes from "./routes/payment.routes";
+import uploadRoutes from "./routes/upload.routes";
 
 dotenv.config();
 
@@ -18,9 +19,10 @@ app.use(express.static("./public"));
 // Logger Midleware
 app.use(logMiddleware);
 
-app.use("/payments", routes);
-
 // Your Routes here
+
+app.use("/payments", paymentRoutes);
+app.use("/uploads", uploadRoutes);
 
 // Example route to retrieve logs
 app.get("/logs", (req: Request, res: Response) => {

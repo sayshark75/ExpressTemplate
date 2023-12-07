@@ -1,8 +1,6 @@
-import express, { NextFunction, Request, Response } from "express";
+import express from "express";
 import dotenv from "dotenv";
 import paymentsController from "../controllers/payments.controller";
-import Razorpay from "razorpay";
-import crypto from "crypto";
 
 dotenv.config();
 

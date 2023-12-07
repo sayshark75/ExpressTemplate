@@ -40,6 +40,8 @@ export const errorHandler: ErrorHandlerType = (err, req, res, next) => {
   res.status(statusCode).json({
     error: {
       message: err.message,
+      name: err.name,
+      status: false,
       stack: process.env.NODE_ENV === "production" ? "🔒" : err.stack, // Stack trace is hidden in production
     },
   });

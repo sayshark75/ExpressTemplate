@@ -4,14 +4,13 @@
 - With Seperate Error Handling Middleware
 - and a Logger to check API Call Logs
 - Added Payment Features of Razorpay
+- Added Image Upload Service using Multer, (Will be switch to AWS S3 in future)
 
 # Usage
 
 - Clone this project
-- Install Packages using npm or yarn, etc...
+- Install Packages using yarn, etc...
 
-`npm i`
-or
 `yarn`
 
 - Add .env file with PORT
@@ -26,7 +25,7 @@ or
 
 - Create your own .env file
 
-- Put your RAZORPAY_KEY, RAZORPAY_SECRET
+- Put your `RAZORPAY_KEY` & `RAZORPAY_SECRET`
 
 - Modify Payment Controller and Payment Service
 
