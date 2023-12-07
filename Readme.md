@@ -13,7 +13,7 @@
 
 `yarn`
 
-- Add .env file with PORT
+- Add .env file with `PORT`
 
 - Initialize Git, so you can connect with your Repo
 
