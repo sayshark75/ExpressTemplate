@@ -4,7 +4,7 @@
 - With Seperate Error Handling Middleware
 - and a Logger to check API Call Logs
 - Added Payment Features of Razorpay
-- Added Image Upload Service using Multer, (Will be switch to AWS S3 in future)
+- Added File Upload Service using Multer, (Will be switch to AWS S3 in future)
 
 # Usage
 
@@ -15,9 +15,7 @@
 
 - Add .env file with `PORT`
 
-- Initialize Git, so you can connect with your Repo
-
-`git init`
+- Initialize Git, so you can connect with your Repo using `git init`
 
 - Start Using this Boilerplate
 
@@ -25,11 +23,25 @@
 
 - Create your own .env file
 
-- Put your `RAZORPAY_KEY` & `RAZORPAY_SECRET`
+- Put your `RAZORPAY_KEY & RAZORPAY_SECRET` in .env file
 
 - Modify Payment Controller and Payment Service
 
 - Done...
+
+# File Uploading Feature
+
+- There are some uploading routes, which help in different conditions
+
+- We can upload a Sngle File
+
+- We can Upload Multiple files from Single Input.
+
+- We can Upload Multiple files from Multiple Inputs.
+
+- Error Handling Provided
+
+- Customise as per your needs...
 
 # Contribution
 

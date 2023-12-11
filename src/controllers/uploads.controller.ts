@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 
 const uploadsController = {
+  // upload just one file
   uploadSingleFile: (req: Request, res: Response, next: NextFunction) => {
     try {
       res.send({ msg: "Upload Success", status: true });
@@ -11,6 +12,7 @@ const uploadsController = {
     }
   },
 
+  // upload multiple files with one input field
   uploadMultiFiles: (req: Request, res: Response, next: NextFunction) => {
     try {
       res.send({ msg: "Upload Success", status: true });
@@ -21,6 +23,8 @@ const uploadsController = {
     }
   },
 
+  // upload multiple input files, like profile picture + cover photo + pdf document.
+  // from different inputs and send to this request to handle.
   uploadMultipleFields: (req: Request, res: Response, next: NextFunction) => {
     try {
       res.send({ msg: "Upload Success", status: true });
