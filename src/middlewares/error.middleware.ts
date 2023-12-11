@@ -1,4 +1,5 @@
 import { NextFunction, Request, Response } from "express";
+import multer from "multer";
 
 // Define the type for the error handler function
 export type ErrorHandlerType = (err: Error, req: Request, res: Response, next: NextFunction) => void;
@@ -35,7 +36,12 @@ export const errorHandler: ErrorHandlerType = (err, req, res, next) => {
       // Add more cases as needed for other custom error types
     }
   }
-
+  if (err instanceof multer.MulterError) {
+    switch (err.message) {
+      case "Unexpected field":
+        err.message = `Unexpected Input field name "${err.field}"`;
+    }
+  }
   // Send the error response with the appropriate status code and error details
   res.status(statusCode).json({
     error: {

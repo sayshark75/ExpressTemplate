@@ -10,6 +10,7 @@ const uploadsController = {
       next(exception);
     }
   },
+
   uploadMultiFiles: (req: Request, res: Response, next: NextFunction) => {
     try {
       res.send({ msg: "Upload Success", status: true });
@@ -19,6 +20,7 @@ const uploadsController = {
       next(exception);
     }
   },
+
   uploadMultipleFields: (req: Request, res: Response, next: NextFunction) => {
     try {
       res.send({ msg: "Upload Success", status: true });

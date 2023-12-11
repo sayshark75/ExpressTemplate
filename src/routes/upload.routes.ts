@@ -8,9 +8,9 @@ const router = express.Router();
 router.post("/file", uploader.single("file"), uploadsController.uploadSingleFile);
 
 // Multiple Images, only allowed 8 images per request
-router.post("/file", uploader.array("file", 8), uploadsController.uploadMultiFiles);
+router.post("/multi-select", uploader.array("file", 8), uploadsController.uploadMultiFiles);
 
 // Multiple different Files Uploader (check Uploader Middleware)
-router.post("/multi-uploads", multiUploader, uploadsController.uploadMultipleFields);
+router.post("/multi-input", multiUploader, uploadsController.uploadMultipleFields);
 
 export default router;
