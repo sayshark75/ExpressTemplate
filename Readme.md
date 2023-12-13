@@ -86,7 +86,7 @@
   }
   ```
 
-- Note: In this template the AWS S3 Response for client was customised as same to the AWS S3 V2
+- Note: In this template the AWS S3 V3 Response for client was customised as same to the AWS S3 V2
 
 - You can customize as per your needs...
 
