@@ -33,7 +33,7 @@
 
 - There are some uploading routes, which help in different conditions
 
-- We can upload a Sngle File
+- We can upload a Sngle File.
 
 - We can Upload Multiple files from Single Input.
 
