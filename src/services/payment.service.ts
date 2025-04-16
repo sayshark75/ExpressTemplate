@@ -1,5 +1,5 @@
 import Razorpay from "razorpay";
-import { PaymentDatatypes } from "../Types";
+import { PaymentDatatypes } from "../global";
 import { IncomingHttpHeaders } from "http";
 
 const paymentServices = {

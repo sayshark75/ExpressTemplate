@@ -5,7 +5,6 @@ import dotenv from "dotenv";
 import { errorHandler } from "./middlewares/error.middleware";
 import { logMiddleware } from "./middlewares/log.middleware";
 import paymentRoutes from "./routes/payment.routes";
-import uploadRoutes from "./routes/upload.routes";
 
 dotenv.config();
 
@@ -22,7 +21,6 @@ app.use(logMiddleware);
 // Your Routes here
 
 app.use("/payments", paymentRoutes);
-app.use("/uploads", uploadRoutes);
 
 // Example route to retrieve logs
 app.get("/logs", (req: Request, res: Response) => {
@@ -52,5 +50,5 @@ app.get("/home/:id", (req: Request, res: Response, next: NextFunction) => {
 app.use(errorHandler);
 
 app.listen(process.env.PORT, () => {
-  console.log(`Server running on Port ${process.env.PORT || 8080} - http://localhost:${process.env.PORT || 8080}/`);
+  console.log(`Server running on Port ${process.env.PORT || 8000} - http://localhost:${process.env.PORT || 8000}/`);
 });

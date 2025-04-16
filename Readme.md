@@ -4,7 +4,6 @@
 - With Seperate Error Handling Middleware
 - and a Logger to check API Call Logs
 - Added Payment Features of Razorpay
-- Added File Upload Service using Multer and AWS S3 Bucket
 
 # Usage
 
@@ -16,6 +15,16 @@
 - Add .env file with `PORT`
 
 - Initialize Git, so you can connect with your Repo using `git init`
+
+- Upgrade Packages, and then Install them
+
+- Recommended YARN
+
+```
+yarn upgrade --latest
+yarn
+yarn dev
+```
 
 - Start Using this Boilerplate
 
@@ -29,66 +38,31 @@
 
 - Done...
 
-# File Uploading Feature
+# Auth Middleware
 
-- There are some uploading routes, which help in different conditions
+- JWT based simple Auth Middleware
 
-- We can upload a Sngle File.
+- Customize as required
 
-- We can Upload Multiple files from Single Input.
+# Packages included
 
-- We can Upload Multiple files from Multiple Inputs.
+```
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.0.1",
+    "razorpay": "^2.9.2",
+    "ts-node": "^10.9.1",
+    "uuid": "^9.0.1"
+```
 
-- Error Handling Provided
+# Deployment
 
-- Customise as per your needs...
+- Use Build command `yarn build` to generate build
 
-# AWS S3 File Upload Service
-
-- Put your `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION` and `AWS_BUCKET_NAME` into .env file
-
-- Customize the Controllers and Manage the Results when file is uploaded.
-
-- Response for uploading via AWS S3 V2
-
-  ```
-  {
-    "msg": "Upload Success",
-    "status": true,
-    "result": {
-        "ETag": "\"4299dcccfb0fe6130abec9742ca22f51\"",
-        "ServerSideEncryption": "AES256",
-        "Location": "https://express-test-multer-bucket.s3.ap-south-1.amazonaws.com/uploads/a9c1f899-9a16-47ad-83bb-f219076f0ca1-wall.jpeg",
-        "key": "uploads/a9c1f899-9a16-47ad-83bb-f219076f0ca1-wall.jpeg",
-        "Key": "uploads/a9c1f899-9a16-47ad-83bb-f219076f0ca1-wall.jpeg",
-        "Bucket": "express-test-multer-bucket"
-    }
-  }
-  ```
-
-- Response for uploading via AWS S3 V3
-
-  ```
-  {
-    "msg": "Upload Success",
-    "status": true,
-    "result": {
-        "$metadata": {
-            "httpStatusCode": 200,
-            "requestId": "QXPS8SRWTTAAHMBC",
-            "extendedRequestId": "987tSfCYVZzrW/XMts8HJ6gsrMrI3UTMQue8nMY1VrpquDwRrn6Vhfcawx524gsNtfb5jLCQr7k=",
-            "attempts": 1,
-            "totalRetryDelay": 0
-        },
-        "ETag": "\"4299dcccfb0fe6130abec9742ca22f51\"",
-        "ServerSideEncryption": "AES256"
-    }
-  }
-  ```
-
-- Note: In this template the AWS S3 V3 Response for client was customised as same to the AWS S3 V2
-
-- You can customize as per your needs...
+- deploy build on any platform like AWS, GCP, Azure, Render, Etc.
 
 # Contribution
 

@@ -17,7 +17,7 @@ export const errorHandler: ErrorHandlerType = (err, req, res, next) => {
   // Send the error response with the appropriate status code and error details
   res.status(500).json({
     error: {
-      message: err.message,
+      message: err,
       status: false,
     },
   });
